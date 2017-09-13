@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="edu.memphis.netlab.homesec">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+        <activity
+            android:name=".activity.AddDeviceActivity"
+            android:label="Add Device">
+        </activity>
+
+        <service
+            android:name=".nservice.HomeSecNFDClientService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".activity.UserPanelActivity">
+        </activity>
+        <activity android:name=".activity.IdentityActivity">
+        </activity>
+        <activity android:name=".activity.Main2Activity">
+        </activity>
+        <activity android:name=".activity.IDListActivity">
+        </activity>
+        <activity
+            android:name=".activity.IdentityListActivity"
+            android:label="@string/title_activity_identity_list"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activity.ServiceListActivity">
+        </activity>
+        <activity android:name=".activity.PermissionManagerActivity">
+        </activity>
+        <activity
+            android:name=".activity.PermissionsActivity"
+            android:label="@string/title_activity_permissions"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.TemperatureReaderActivity"
+            android:label="@string/title_activity_temperature_reader"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>
